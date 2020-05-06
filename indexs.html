@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="block-up">
+      <!-- block-up_items  -->
+      <div class="block-up_items">
+        <button class="up_items--btn signBtn">
+          <img src="./img/signs.png" alt="">
+        </button>
+
+        <div>
+          <button class="up_items--btn boldBtn">
+            <img src="./img/bold-64.png" alt="">
+          </button>
+          <button class="up_items--btn italicBtn">
+            <img src="./img/text-italic-64.png" alt="">
+          </button>
+          <button class="up_items--btn formatBtn">
+            <img src="./img/text-format.png" alt="">
+          </button>
+          <button class="up_items--btn strikeBtn">
+            <img src="./img/text-strikethrough_icon-icons.com_71319.png" alt="">
+          </button>
+        </div>
+      
+        <div>
+          <button class="up_items--btn leftBtn">
+            <img src="./img/text-left-64.png" alt="">
+          </button>
+          <button class="up_items--btn centerBtn">
+            <img src="./img/text-center-64.png" alt="">
+          </button>
+          <button class="up_items--btn rightBtn">
+            <img src="./img/text-right-64.png" alt="">
+          </button>
+        </div>
+
+        <div style="display: flex;">
+            <img class="textSelect" src="./img/interface.png" alt="" style="position: absolute;
+            z-index: 1; top: 33px; cursor: pointer; left: 917px; width: 48px; background-color: white;">
+            <select name="fontFamily" id="fontFamily" onclick="styleFontFamily()">
+              <option></option>
+              <option style="font-family: Arial" value="Arial">Arial</option>
+              <option style="font-family: Georgia"  value="Georgia">Georgia</option>
+              <option style="font-family: Impact" value="Impact">Impact</option>
+              <option style="font-family: Tahoma" value="Tahoma">Tahoma</option>
+              <option style="font-family: 'Times New Roman'" value="Times New Roman">Times New Roman</option>
+              <option style="font-family: Verdana" value="Verdana">Verdana</option>
+            </select>
+
+            <img src="./img/edit-text.png" alt="" style="position: absolute; z-index: 1; left: 65%; top: 33px; cursor: pointer; left: 992px; width: 48px; background-color: white;">
+            <select name="sizeText" id="sizeText" onclick="styleTextSize()">
+              <option></option>
+              <option style="font-size: 12px" value="12px">12px</option>
+              <option style="font-size: 14px"  value="14px">14px</option>
+              <option style="font-size: 16px" value="16px">16px</option>
+              <option style="font-size: 18px" value="18px">18px</option>
+              <option style="font-size: 20px" value="20px">20px</option>
+              <option style="font-size: 22px" value="22px">22px</option>
+              <option style="font-size: 25px" value="25px">25px</option>
+              <option style="font-size: 30px" value="30px">30px</option>
+            </select>
+            
+          <button class="up_items--btn paintBtn" style="margin-right: 5px;">
+            <img src="./img/icons8-палитра-100.png" alt="">
+          </button>
+          <button class="up_items--btn imgBtn">
+            <img src="./img/picture-2-64.png" alt="">
+          </button>
+        </div>
+        
+        <button class="up_items--btn padlockBtn">
+          <img src="./img/padlock-64.png" alt="">
+        </button>
+      </div>  
+
+      <!-- block-up_icons -->
+      <div class="block-up_icons">
+        <button class="up_icon--btn save">
+          <img src="./img/interface (2).png" alt="">
+        </button>
+
+        <button class="up_icon--btn menu">
+          <img src="./img/menu.png" alt="">
+        </button>
+
+        <button class="up_icon--btn tools">
+          <img src="./img/tools.png" alt="">
+        </button>
+
+        <button class="up_icon--btn list">
+          <img src="./img/interface (1).png" alt="">
+        </button>
+      </div>
+    </div>
+
+    <!-- block color -->
+    <div class="block-color-text">
+      <div class="block-color-up">
+        <div class="block-color-up-title">Choose text color:</div>
+        <button class="block-color-up-btn">X</button>
+      </div>
+      <div class="line"></div>
+      <div class="block-color-down">
+        <div class="block-color-down-grid">
+          <div class="block yellow"></div>
+          <div class="block blue"></div>
+          <div class="block green"></div>
+          <div class="block grey"></div>
+          <div class="block orange"></div>
+          <div class="block red"></div>
+          <div class="block greenyellow"></div>
+          <div class="block pink"></div>
+          <div class="block violet"></div>
+          <div class="block chartreuse"></div>
+
+          <div class="block magenta"></div>
+          <div class="block maroon"></div>
+          <div class="block navy"></div>
+          <div class="block olive"></div>
+          <div class="block orchid"></div>
+          <div class="block peru"></div>
+          <div class="block plum"></div>
+          <div class="block salmon"></div>
+          <div class="block turquoise"></div>
+          <div class="block white"></div>
+          <div class="block black"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- block background and img  -->
+    <div class="block-background-style">
+      <div class="block-background-style-up">
+        <div class="block-background-style-up-title">Choose background color or image:</div>
+        <button class="block-background-style-up-btn">X</button>
+      </div>
+      <div class="line"></div>
+      <div class="block-background-style-down">
+        <div class="blocks-of-choose">
+          <div class="block-of-choose choose-color">Color</div>
+          <div class="block-of-choose choose-img">Image</div>
+          <div class="block-of-choose choose-file">File</div>
+        </div>
+        <!-- background color  -->
+        <div class="block-color-down-grid-color grey-color">
+          <div class="block-background yellow"></div>
+          <div class="block-background blue"></div>
+          <div class="block-background green"></div>
+          <div class="block-background grey"></div>
+          <div class="block-background orange"></div>
+          <div class="block-background red"></div>
+          <div class="block-background greenyellow"></div>
+          <div class="block-background pink"></div>
+          <div class="block-background violet"></div>
+          <div class="block-background chartreuse"></div>
+          <div class="block-background magenta"></div>
+          <div class="block-background maroon"></div>
+          <div class="block-background navy"></div>
+          <div class="block-background olive"></div>
+          <div class="block-background orchid"></div>
+          <div class="block-background peru"></div>
+          <div class="block-background plum"></div>
+          <div class="block-background salmon"></div>
+          <div class="block-background turquoise"></div>
+          <div class="block-background white"></div>
+          <div class="block-background black"></div>
+        </div>
+
+        <!-- image  -->
+        <div class="block-color-down-images grey-color">
+          <div class="img_first first-img"></div>
+          <div class="img_second second-img"></div>
+          <div class="img_third third-img"></div>
+          <div class="img_fourth fourth-img"></div>
+          <div class="img_fifth fifth-img"></div>
+          <div class="img_sixth sixth-img"></div>
+        </div>
+      </div>
+
+      <!-- file  -->
+      <div class="block-color-down-file grey-color" style="display: flex;">
+        <input type="file" name="file" id="file" onchange="readURL(this)" class="inputfile" />
+        <label for="file">Choose a file</label>
+      </div>
+    </div> 
+
+    <!-- sign up  -->
+    <div class="sign-up">
+      <img src="" alt="">
+      <div class="sign-up-block-up-title">Sign In</div>
+      <div class="line"></div>
+      <div class="block-background-style-down">
+        <input type="text" id="sign-in-login"  placeholder="Login here...">
+        <input type="password" name="" id="sign-in-password" placeholder="Password here...">
+        <div class="warning-empty">Value is ampty</div>
+        <div class="warning-wrong">Please check your login or password</div>
+        <button class="sign-in-btn">Sign In</button>
+      </div>
+    </div>
+
+    <!-- table  -->
+    <div class="table">
+      <div class="table-up">
+        <div class="table-up-title">Create table:</div>
+        <button class="table-up-btn">X</button>
+      </div>
+      <div class="line"></div>
+      <div class="table-down">
+        <div style="display: flex;">
+          <div class="table-down_left">
+            <form action="" name="formFirst" id="formFirst">
+              <div class="table-down-txt">Count TR:</div>
+              <input type="text" class="table-down-inp" name="countTr" placeholder="Type here...">
+              <div class="table-down-txt">Width of TD:</div>
+              <input type="text" class="table-down-inp" placeholder="Type here..." name="widthTD">
+              <div class="table-down-txt">Width of border:</div>
+              <input type="text" class="table-down-inp" placeholder="Type here..." name="borderWidth">
+            </form>
+          </div>
+
+          <div class="table-down_right">
+            <form action="" name="formSecond" id="formSecond">
+              <div class="table-down-txt">Count TD:</div>
+              <input type="text" class="table-down-inp" placeholder="Type here..." name="countTd">
+              <div class="table-down-txt">Height of TD:</div>
+              <input type="text" class="table-down-inp" placeholder="Type here..." name="heightTD">
+            </form>
+          
+
+          <form action="" name="border-style" id="borderStyle">
+            <div class="table-down-txt">Style of border</div>
+            <select name="borderType" id="borderType">
+              <option value="" disabled selected>choose style</option>
+              <option value="solid">solid</option>
+              <option value="dotted">dotted</option>
+              <option value="double">double</option>
+              <option value="groove">groove</option>
+            </select>
+
+            <div class="table-down-txt">Color of border</div>
+            <select name="borderColor" id="borderColor">
+              <option value="" disabled selected>choose color</option>
+              <option value="black">black</option>
+              <option value="red">red</option>
+              <option value="blue">blue</option>
+              <option value="green">green</option>
+            </select>
+          </form>
+        </div>
+      </div>
+
+        <div class="warning-invalid-value">Invalid value</div>
+
+        <div style="display: flex;">
+          <button class="table-down-btn red reset" type="reset">Reset</button>
+          <button class="table-down-btn green save-table">Create Table</button>
+        </div>
+        
+      </div>
+    </div>
+
+    <!-- tools  -->
+    <div class="tools-block">
+      <div class="tools-up">
+        <div class="tools-up-title">Create Ol:</div>
+        <button class="tools-up-btn">X</button>
+      </div>
+      <div class="line"></div>
+      <div class="tools-down">
+        <form action="" name="tools-form" id="toolsForm">
+          <div class="tools-down-txt">Create li item:</div>
+          <input type="text" class="tools-down-inp" placeholder="Type here..." name="liTools">
+
+          <div class="tools-down-txt">Type mark of list</div>
+          <select name="toolsType" id="toolsType">
+            <option value="" disabled selected>choose Ol type marker</option>
+            <option value="decimal-leading-zero">decimal-leading-zero</option>
+            <option value="lower-alpha">lower-alpha</option>
+            <option value="lower-greek
+            ">lower-greek
+            </option>
+          </select>
+        </form>
+
+        <div class="warning-tools">Invalid value</div>
+
+        <div class="tools-down-btn">
+          <button class="tools-btn red reset-tools">Reset</button>
+          <button class="tools-btn green create-tools">Create list</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- list  -->
+    <div class="list-block">
+      <div class="list-up">
+        <div class="list-up-title">Create Ul:</div>
+        <button class="list-up-btn">X</button>
+      </div>
+      <div class="line"></div>
+      <div class="list-down">
+        <form action="" name="list-form" id="listForm">
+          <div class="list-down-txt">Create li item:</div>
+          <input type="text" class="list-down-inp" placeholder="Type here..." name="liList">
+
+          <div class="list-down-txt">Type mark of list</div>
+          <select name="listType" id="listType">
+            <option value="" disabled selected>choose Ul type marker</option>
+            <option value="square">square</option>
+            <option value="circle">circle</option>
+            <option value="disc">disc</option>
+          </select>
+        </form>
+
+        <div class="warning-list">Invalid value</div>
+
+        <div class="list-down-btn">
+          <button class="list-btn red reset-list">Reset</button>
+          <button class="list-btn green create-list">Create list</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- "block-down -->
+    <div class="block-down">
+      <div class="block-down_text">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+      </div>
+
+      <div class="block-down_html">
+        <textarea name="area" id="textarea"></textarea>
+      </div>
+    </div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+  <script src="./index.js"></script>
+</body>
+</html>
+
